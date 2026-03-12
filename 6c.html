@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button onclick="readInput()">Read Input</button>
+
+    <script>
+        // 2. prompt(): Dialog box with an input field
+        let name = prompt("Please enter your name:");
+
+        // 3. confirm(): Boolean input (OK/Cancel)
+        let isHappy = confirm("Are you happy today?");
+
+        function readInput() {
+            let val = document.getElementById("userInput").value;
+            alert("You typed: " + val);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="outputContainer"></div>
+
+    <script>
+        // 1. innerHTML: Writing into an HTML element (Common for UI)
+        document.getElementById("outputContainer").innerHTML = "Writing to the page via innerHTML";
+
+        // 2. document.write(): Directly into the HTML stream (Mainly for testing)
+        document.write("<p>Writing via document.write()</p>");
+
+        // 3. window.alert(): A pop-up box
+        window.alert("This is an alert box!");
+
+        // 4. console.log(): For debugging (Visible in Browser Dev Tools)
+        console.log("This is a developer message in the console.");
+    </script>
+</body>
+</html>

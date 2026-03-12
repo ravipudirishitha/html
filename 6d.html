@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voter Eligibility</title>
+    <style>
+        table { border-collapse: collapse; width: 50%; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .eligible { color: green; font-weight: bold; }
+        .not-eligible { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h2>Voter Information System</h2>
+    <div id="tableArea"></div>
+
+    <script>
+        // Ask for input
+        let userName = prompt("Enter your full name:");
+        let userAge = prompt("Enter your age:");
+
+        // Convert age to a number
+        let age = parseInt(userAge);
+        let status = "";
+        let statusClass = "";
+
+        // Eligibility Logic
+        if (age >= 18) {
+            status = "Eligible to Vote";
+            statusClass = "eligible";
+        } else {
+            status = "Not Eligible to Vote";
+            statusClass = "not-eligible";
+        }
+
+        // Generate Table
+        let tableHTML = `
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>${userName}</td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>${age}</td>
+                </tr>
+                <tr>
+                    <td>Eligibility Status</td>
+                    <td class="${statusClass}">${status}</td>
+                </tr>
+            </table>
+        `;
+
+        // Display the table
+        document.getElementById("tableArea").innerHTML = tableHTML;
+    </script>
+
+</body>
+</html>

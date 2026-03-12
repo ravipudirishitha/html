@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+        <form action="#" method="post">
+        <table border="3" cellpadding="9" cellspacing="5">
+       <caption><b>Fill in your details</b></caption>
+
+      <!-- Text Field -->
+      <tr>
+        <td>Full Name:</td>
+        <td><input type="text" name="fullname" required></td>
+      </tr>
+
+      <!-- Password Field -->
+      <tr>
+        <td>Password:</td>
+        <td><input type="password" name="password" required></td>
+      </tr>
+
+      <!-- Number Field -->
+      <tr>
+        <td>Age:</td>
+        <td><input type="number" name="age" required></td>
+      </tr>
+
+      <!-- Date of Birth Field -->
+      <tr>
+        <td>Date of Birth:</td>
+        <td><input type="date" name="dob"></td>
+      </tr>
+
+      <!-- Radio Buttons -->
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <input type="radio" name="gender" value="Male"> Male
+          <input type="radio" name="gender" value="Female"> Female
+          <input type="radio" name="gender" value="Other"> Other
+        </td>
+      </tr>
+
+      <!-- Checkboxes -->
+      <tr>
+        <td>Interests:</td>
+        <td>
+          <input type="checkbox" name="interest" value="Cyber Security"> Cyber Security
+          <input type="checkbox" name="interest" value="Drawing"> Drawing
+          <input type="checkbox" name="interest" value="Movies"> Movies
+        </td>
+      </tr>
+
+      <!-- List Box -->
+      <tr>
+        <td>Country:</td>
+        <td>
+          <select name="country">
+            <option value="in">India</option>
+            <option value="us">USA</option>
+            <option value="uk">UK</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Multi-select List Box -->
+      <tr>
+        <td>Skills (multi-select):</td>
+        <td>
+          <select name="skills" multiple size="4">
+            <option value="HTML">HTML</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Textarea -->
+      <tr>
+        <td>Address:</td>
+        <td><textarea name="address" rows="2" cols="20"></textarea></td>
+      </tr>
+
+      <!-- Buttons -->
+      <tr>
+         <td colspan="2" style="text-align:center;">
+          <input type="submit" value="Submit">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
