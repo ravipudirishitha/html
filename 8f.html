@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Denomination</title>
+</head>
+<body>
+
+<script>
+    var amount = parseInt(prompt("Enter deposited amount:"));
+
+    var notes = [100, 50, 20, 10, 5, 2, 1];
+
+    document.write("<h3>Denomination:</h3>");
+
+    for (var i = 0; i < notes.length; i++) {
+        var count = Math.floor(amount / notes[i]);
+        if (count > 0) {
+            document.write(count + " - " + notes[i] + "'s<br>");
+            amount = amount % notes[i];
+        }
+    }
+</script>
+
+</body>
+</html>

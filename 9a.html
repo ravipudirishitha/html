@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Functions</title>
+</head>
+<body>
+
+<h2>Number Operations</h2>
+
+Enter a number:
+<input type="number" id="num">
+<button onclick="calculate()">Check</button>
+
+<p id="factorial"></p>
+<p id="fibonacci"></p>
+<p id="prime"></p>
+<p id="palindrome"></p>
+
+<script>
+
+function factorial(n){
+    let fact = 1;
+    for(let i=1;i<=n;i++){
+        fact *= i;
+    }
+    return fact;
+}
+
+function fibonacci(n){
+    let a=0,b=1,series="0 1 ";
+    for(let i=2;i<n;i++){
+        let c=a+b;
+        series += c + " ";
+        a=b;
+        b=c;
+    }
+    return series;
+}
+
+function primeNumbers(n){
+    let primes="";
+    for(let i=2;i<=n;i++){
+        let isPrime=true;
+        for(let j=2;j<i;j++){
+            if(i%j==0){
+                isPrime=false;
+                break;
+            }
+        }
+        if(isPrime){
+            primes += i + " ";
+        }
+    }
+    return primes;
+}
+
+function palindrome(n){
+    let rev=0,temp=n;
+    while(temp>0){
+        let r=temp%10;
+        rev=rev*10+r;
+        temp=Math.floor(temp/10);
+    }
+    return rev==n;
+}
+
+function calculate(){
+    let num=parseInt(document.getElementById("num").value);
+
+    document.getElementById("factorial").innerHTML="Factorial: "+factorial(num);
+    document.getElementById("fibonacci").innerHTML="Fibonacci Series: "+fibonacci(num);
+    document.getElementById("prime").innerHTML="Prime Numbers: "+primeNumbers(num);
+    document.getElementById("palindrome").innerHTML="Palindrome: "+(palindrome(num) ? "Yes" : "No");
+}
+
+</script>
+
+</body>
+</html>
